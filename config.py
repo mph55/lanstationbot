@@ -2,6 +2,7 @@ host = "127.0.0.1"
 port = 8000
 gameport = 7777
 token = "token"
+serverstatusID = "000000000000000000"
 ahelpID = "000000000000000000"
 mainID = "000000000000000000"
 triggerString = "!"

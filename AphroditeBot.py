@@ -106,7 +106,7 @@ def handle_queue():
     if admin_message(queuedMsg):
         yield from ourBot.get_channel(config.ahelpID).send(queuedMsg)
     else:
-        yield from ourBot.get_channel(config.mainID).send(queuedMsg)
+        yield from ourBot.get_channel(config.serverstatusID).send(queuedMsg)
 
 def main():
 
