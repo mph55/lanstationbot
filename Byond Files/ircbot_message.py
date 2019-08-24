@@ -19,7 +19,7 @@ def pack():
 
 def nudge(data):
     HOST = sys.argv[2]
-    PORT = 45678
+    PORT = 8000
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((HOST, PORT))
     s.send(data)

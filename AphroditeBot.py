@@ -19,12 +19,12 @@ def parse_command(message, client, loop):
         return BotCommands.Ping(client, loop, message)
     elif command[0] == "status":
         return BotCommands.Status(client, loop, message)
-    elif command[0] == "players":
-        return BotCommands.Players(client, loop, message)
-    elif command[0] == "manifest":
-        return BotCommands.Manifest(client, loop, message)
-    elif command[0] == "revision":
-        return BotCommands.Revision(client, loop, message)
+#    elif command[0] == "players":
+ #       return BotCommands.Players(client, loop, message)
+  #  elif command[0] == "manifest":
+   #     return BotCommands.Manifest(client, loop, message)
+    #elif command[0] == "revision":
+     #   return BotCommands.Revision(client, loop, message)
     elif command[0] == "info":
         if BotCommands.has_perms(message.author) == True:
             return BotCommands.Info(client, loop, message)
@@ -104,9 +104,9 @@ def handle_queue():
         or "All admins AFK" in queuedMsg:
         queuedMsg = "@here " + queuedMsg
     if admin_message(queuedMsg):
-        yield from ourBot.send_message(ourBot.get_channel(config.ahelpID), queuedMsg)
+        yield from ourBot.get_channel(config.ahelpID).send(queuedMsg)
     else:
-        yield from ourBot.send_message(ourBot.get_channel(config.mainID), queuedMsg)
+        yield from ourBot.get_channel(config.mainID).send(queuedMsg)
 
 def main():
 

@@ -1,9 +1,9 @@
-host = "localhost"
+host = "127.0.0.1"
 port = 8000
-gameport = 8888
+gameport = 7777
 token = "token"
 ahelpID = "000000000000000000"
 mainID = "000000000000000000"
 triggerString = "!"
 commskey = "key"
-perm_roles = ["Administration", "Development"]
+perm_roles = ["mod"]
