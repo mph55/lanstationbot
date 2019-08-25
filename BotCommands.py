@@ -85,15 +85,13 @@ class Status(Command):
             version = status["version"][0]
             admins = status["admins"][0]
             playercount = status["players"][0]
-            roundduration = status["roundduration"][0]
             gamemode = status["mode"][0]
             playerList = []
             for key in status:
                 if "player" in key and not "players" in key:
                     playerList.append(status[key][0])
-            statusMsg += "Round duration: %s\r\n" % roundduration
             statusMsg += "Station time: %s\r\n" % stationtime
-            statusMsg += "Players online: %s\r\n```" % playercount
+            statusMsg += "Online players: %s\r\n```" % playercount
 			statusMsg += "Gamemode: %s\r\n" % gamemode
             yield from self.message.channel.send(statusMsg)
         except OSError:
