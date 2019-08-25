@@ -78,7 +78,7 @@ def admin_message(message):
 
     if "@here" in message:
         message = message.strip("@here ")
-    if message.startswith("Request for Help") \
+    if message.startswith("HELP") \
         or message.startswith("Reply") \
         or message.endswith("no more admins online.") \
         or message.partition("PM")[1] == "PM" \
