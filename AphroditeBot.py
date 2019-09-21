@@ -80,6 +80,7 @@ def admin_message(message):
         message = message.strip("@here ")
     if message.startswith("HELP") \
         or message.startswith("Reply") \
+		or message.startswith("**Help") \
         or message.endswith("no more admins online.") \
         or message.partition("PM")[1] == "PM" \
         or message == "Round has started with no admins online.":
